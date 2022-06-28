@@ -1,4 +1,4 @@
 <?php
-echo "shopmercy staging test: 28.06.2022-1";
+echo "Deploy staging test: 28.06.2022-4";
 phpinfo();
 ?>

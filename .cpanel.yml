@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/m2user/cDeploy
+    - export DEPLOYPATH=/home/l0vsqn67h3/cDeploy
     - /bin/cp -R info.php $DEPLOYPATH

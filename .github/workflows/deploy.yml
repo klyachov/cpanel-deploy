@@ -15,8 +15,7 @@ jobs:
         username: ${{ secrets.SSH_USER_KAV }}
         key: ${{ secrets.SSH_KEY_ZEDLOCK }}
         port: ${{ secrets.SSH_PORT }}
-        script:  cd /home/klyachov/tmp/23 && \
-                 pwd
+        script:  cd /home/klyachov/tmp/23 && pwd
     - name: Git pull
       uses: appleboy/ssh-action@master
       with:
@@ -24,6 +23,4 @@ jobs:
         username: ${{ secrets.SSH_USER_KAV }}
         key: ${{ secrets.SSH_KEY_ZEDLOCK }}
         port: ${{ secrets.SSH_PORT }}
-        script:  cd /home/klyachov/tmp/23 && \
-                 git pull && \
-                 ls -lah
+        script:  cd /home/klyachov/tmp/23 && git pull && ls -lah

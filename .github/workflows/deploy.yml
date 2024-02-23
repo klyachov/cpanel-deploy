@@ -23,7 +23,6 @@ jobs:
         username: ${{ secrets.SSH_USER_KAV }}
         key: ${{ secrets.SSH_KEY_ZEDLOCK }}
         port: ${{ secrets.SSH_PORT }}
-        script:  |
-          cd /home/klyachov/tmp/23
-          git pull
-          ls -lah
+        script: cd /home/klyachov/tmp/23
+        script: git pull
+        script: ls -lah

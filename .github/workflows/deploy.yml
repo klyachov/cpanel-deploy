@@ -1,0 +1,29 @@
+name: Test build & deploy on DEV2 server
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Test build & deploy on DEV2 server
+    runs-on: ubuntu-latest
+    steps:
+    - name: Go to DIR
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST_KAV }}
+        username: ${{ secrets.SSH_USER_KAV }}
+        key: ${{ secrets.SSH_KEY_ZEDLOCK }}
+        port: ${{ secrets.SSH_PORT }}
+        script:  cd /home/klyachov/tmp/23 && \
+                 pwd
+    - name: Git pull
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST_KAV }}
+        username: ${{ secrets.SSH_USER_KAV }}
+        key: ${{ secrets.SSH_KEY_ZEDLOCK }}
+        port: ${{ secrets.SSH_PORT }}
+        script:  cd /home/klyachov/tmp/23 && \
+                 git pull && \
+                 ls -lah

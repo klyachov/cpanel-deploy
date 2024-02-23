@@ -16,7 +16,7 @@ jobs:
         key: ${{ secrets.SSH_KEY_ZEDLOCK }}
         port: ${{ secrets.SSH_PORT }}
         script: cd /home/klyachov/tmp/23 && pwd
-    - name: Git pull
+    - name: Git pull 1
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST_KAV }}
